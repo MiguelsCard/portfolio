@@ -1,0 +1,104 @@
+.App {
+  text-align: center;
+}
+img {
+  height: 40vmin;
+  pointer-events: none;
+}
+.navbar {
+  flex-direction: column;
+  display: flex;
+  background-color: olive;
+  font-size: x-large;
+}
+
+.intro {
+  font-size: xx-large;
+  color: white;
+  background-color: black;
+  padding: 10px;
+  margin: 10px;
+}
+
+.ProjectCard {
+  border: 3px solid orange;
+  display: flex;
+  flex-direction: column;
+}
+/* ----LEFT--------- */
+.ProjectCard .left {
+  justify-content: space-around;
+  border: 2px solid red;
+}
+.ProjectCard .left img {
+  width: 45%;
+  height: 45%;
+}
+/*------RIGHT---------*/
+.ProjectCard .right {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid blue;
+  font-size: 2rem;
+}
+.ProjectCard .right a {
+  margin: 1rem;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* flex-direction: column; */
+  border: 2px solid red;
+  justify-content: space-around;
+}
+.ProjectCard .right img {
+  text-decoration: none;
+  width: 25%;
+  height: 25%;
+  /* scale: 0.5; */
+  border: 2px solid teal;
+}
+
+/* --------------------------- */
+@media (min-width: 800px) {
+  .navbar {
+    background-color: rgb(253, 87, 87);
+    justify-content: space-around;
+    flex-direction: row;
+  }
+  .ProjectCard {
+    flex-direction: row;
+    /* justify-content: space-around; */
+  }
+  .ProjectCard .left {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    border-width: 6px;
+    flex: 1;
+  }
+  .ProjectCard .left img {
+    width: 45%;
+    height: auto;
+  }
+  .ProjectCard .right {
+    border-width: 6px;
+    flex: 2;
+  }
+  .ProjectCard .right img {
+    width: 25%;
+    height: auto;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
