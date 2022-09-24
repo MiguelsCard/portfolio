@@ -1,13 +1,18 @@
 import React from 'react';
 
-export const Jamazon = () => {
+export const Jamazon: React.FC = () => {
   return (
     <div className='ProjectCard'>
       <div className='left'>
-        <h1>Jamazon Image</h1>
+        <img src='jamazon1.png' alt='app'></img>
+        <img src='jamazon2.png' alt='second'></img>
+        <h1>Jamazon</h1>
       </div>
       <div className='right'>
-        <h1>Jamazon text</h1>
+        <a href='https://jamazon-prime-fs.herokuapp.com/home'>
+          {/* <img src='expologo.png' alt='expo logo'></img> */}
+          <h6>Check out the site!</h6>
+        </a>
       </div>
     </div>
   );
