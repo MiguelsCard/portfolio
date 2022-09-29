@@ -8,6 +8,7 @@ export const GeoISpy: React.FC = () => {
     const [entry] = entries;
     entry.target.classList.add('show');
   };
+
   const options = useMemo(() => {
     return {
       root: null,
@@ -29,19 +30,31 @@ export const GeoISpy: React.FC = () => {
       };
     });
   }, [revealRefs, options]);
+
   //This function adds elements to the array
   const addToRefs = (el: HTMLAnchorElement) => {
     if (el && !revealRefs.current.includes(el)) {
       revealRefs.current.push(el);
     }
   };
+
   return (
     <div className='ProjectCard'>
       <div className='left'>
         <img src='geo1.png' alt='app scanning the screen'></img>
         <img src='geo2.png' alt='success screen'></img>
-        <h1>GeoISpy</h1>
-        <a ref={addToRefs} href='home'></a>
+        <a
+          ref={addToRefs}
+          href='https://drive.google.com/file/d/1cWz3mB7O8mEEc5xRZCtAb3ADCSuFM4rK/view'
+        >
+          <p style={{ margin: '2rem' }}>
+            A react native app that encourages users to explore their
+            surroundings
+          </p>
+          <h1>GeoISpy</h1>
+        </a>
+
+        {/* <a ref={addToRefs} href='ProjectCard'></a> */}
       </div>
       <div className='right'>
         <a
@@ -49,7 +62,7 @@ export const GeoISpy: React.FC = () => {
           ref={addToRefs}
           href='https://drive.google.com/file/d/1cWz3mB7O8mEEc5xRZCtAb3ADCSuFM4rK/view'
         >
-          <h6>Video demonstration -</h6>
+          <h6>Video demonstration</h6>
         </a>
         <a
           className='hide'
@@ -65,7 +78,7 @@ export const GeoISpy: React.FC = () => {
           href='https://github.com/Rowlfs-Pianopalace-2204-fsa-Capstone/geo-i-spy'
         >
           <img src='GitHub-logo.jpeg' alt='github logo'></img>
-          <h6>Front-end github repo</h6>
+          <h6>Github repo</h6>
         </a>
       </div>
     </div>
