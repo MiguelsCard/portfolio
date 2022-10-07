@@ -165,7 +165,7 @@
 
 @media (min-width: 800px) {
   .intro {
-    height: 75vh;
+    height: 80vh;
   }
   .navbar {
     justify-content: space-around;
